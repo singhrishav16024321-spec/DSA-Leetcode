@@ -3,13 +3,12 @@ public:
     char findTheDifference(string s, string t) {
         sort(s.begin(),s.end());
         sort(t.begin(),t.end());
-        char p;
-        for(int i=0;i<t.length();i++){
+        for(int i=0;i<t.size();i++){
             if(s[i]!=t[i]){
                 return t[i];
             }
         }
-        return t[t.length()-1];
+        return t[t.size()-1];
         
     }
 };
